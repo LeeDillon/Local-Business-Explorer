@@ -8,9 +8,15 @@ $(document).ready(function () {
     //Location string being overridden by IP address
     var locationString = "paris";
     // var latitude = "52.656755854586464";
-    // var longtitude = "-7.308114483968761";
+    // var longitude = "-7.308114483968761";
 
     var queryURL;
+
+    var resultsArray = [];
+    
+
+
+
 
     // Main function that runs search and populates page with results
     function performSearch() {
@@ -19,24 +25,42 @@ $(document).ready(function () {
         // queryURL = apiURL + "?query=" + searchString + "&ll=" + latitude + "," + longtitude;
         console.log(queryURL)
 
-        var req = new XMLHttpRequest();
-        req.open("GET", queryURL);
-
-        req.setRequestHeader("Authorization", key);
-        req.setRequestHeader("accept", "application/json");
-        console.log(req)
-
-        req.onreadystatechange = function () {
-            if (req.readyState === 4) {
-                console.log(req.status);
-                console.log(req.responseText);
-                console.log(queryURL)
-
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: key
             }
         };
 
-        req.send();
+        fetch(queryURL, options)
+            .then(response => response.json())
+            .then(response => {
+                console.log(response)
+                for (let i = 0; i < response.results.length; i++) {
+                    const lat = response.results[i].geocodes.main.latitude;
+
+                    const lon = response.results[i].geocodes.main.longitude;
+
+                    const pinCoord = [lat, lon];
+                    const pin = {
+                        name: response.results[i].name,
+                        location: pinCoord,
+                    }
+
+                    resultsArray.push(pin);
+
+
+                }
+                
+
+            })
+            .catch(err => console.error(err));
+
     }
 
     performSearch();
 })
+
+
+module.exports = { resultsArray };
