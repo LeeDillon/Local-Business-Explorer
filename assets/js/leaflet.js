@@ -1,5 +1,6 @@
+console.log(resultsArray)
 
-let map = L.map('map').setView([51.505, -0.09], 14);
+var map = L.map('map').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -16,11 +17,6 @@ let circle = L.circle([51.508, -0.11], {
     radius: 250
 }).addTo(map);
 
-// let polygon = L.polygon([
-//     [51.504, -0.08],
-//     [51.503, -0.06],
-//     [51.505, -0.047]
-// ]).addTo(map);
 
 let popup = L.popup()
     .setLatLng([51.513, -0.09])
@@ -35,3 +31,5 @@ function onMapClick(e) {
 }
 
 map.on('click', onMapClick);
+
+// })
