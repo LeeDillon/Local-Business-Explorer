@@ -1,4 +1,3 @@
-const { resultsArray } =  require("./foursquare") ;
 console.log(resultsArray)
 
 var map = L.map('map').setView([51.505, -0.09], 13);
@@ -45,3 +44,5 @@ function onMapClick(e) {
 }
 
 map.on('click', onMapClick);
+
+// })
