@@ -14,6 +14,35 @@ body {
     background-color: white;
 }
 
+.search-bar {
+    display: none;
+}
+
+
+.btn-outline-success {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+
+.form-inline {
+    padding-right: 20px;
+}
+
+.navbarBtn {
+    border: none;
+    background-color: transparent;
+}
+
+.favouriteBtn {
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0;
+}
+
 /* hero */
 .jumbotron {
     background-image: url(/assets/images/placeholder.jpg.crdownload);
@@ -24,7 +53,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
+
+.homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
 
 /* results */
 #results-page {
@@ -47,11 +86,11 @@ body {
     overflow-x: hidden;
 }
 
-.favouriteBtn {
-    background-color: transparent;
-    border: none;
-    color: black;
-    cursor: pointer;
-    font-size: 1.5em;
-    padding: 0;
+
+/* footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
