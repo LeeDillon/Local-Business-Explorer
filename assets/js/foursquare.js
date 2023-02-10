@@ -4,6 +4,7 @@ var key = "fsq35dGw8MR3i1aS2Szjz+ZWoEvdc58TSQd57mxpQMRjvrY=";
 var searchString = "";
 var locationString = "";
 var queryURL;
+
 // Empty array to store result objects from API call
 var resultsArray = [];
 
@@ -12,16 +13,20 @@ $("#search-button").on("click", function () {
     // Get user input and run main search function using parameters
     searchString = $("#search-input").val();
     locationString = $("#location-input").val();
-    performSearch(searchString, locationString);
-    console.log(resultsArray);
-    plotMap(resultsArray);
+    performSearch(searchString, locationString)
+    // .then(function () {
+
+    // })
+
+    // console.log(resultsArray);
+    // console.log(resultsArray.length);
 });
 
 // Main function that runs search and gets a list of 10 search results
 function performSearch(searchString, locationString) {
-    // console.log(`before array reset ${resultsArray}`);
+
     resultsArray = [];
-    
+
     // create query url using user input parameters
     queryURL = apiURL + "?query=" + searchString + "&near=" + locationString;
     const options = {
@@ -50,8 +55,8 @@ function performSearch(searchString, locationString) {
                 }
                 // Add pin objects to results array
                 resultsArray.push(pin);
-                console.log("this is pin" + pin);
             }
+            plotMap(resultsArray);
         })
         // Catch any errors and log to console
         .catch(err => console.error(err));
