@@ -1,14 +1,25 @@
-console.log(resultsArray)
+// console.log(resultsArray)
+function plotMap(resultsArray) {
+    
+console.log(resultsArray);
 
-var map = L.map('map').setView([51.505, -0.09], 13);
+    
+for (let index = 0; index < resultsArray.length; index++) {
+    const lat = resultsArray[index].location[0];
+    const lon = resultsArray[index].location[1];
+    console.log(resultsArray)
+    const marker = L.marker([lat, lon]).addTo(map);
+    console.log(lat);
+}
+
+let map = L.map('map').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    minZoom: 15,
+    // minZoom: 15,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-let marker = L.marker([51.503, -0.09]).addTo(map);
 
 let circle = L.circle([51.508, -0.11], {
     color: 'red',
@@ -32,4 +43,4 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-// })
+};

@@ -13,10 +13,15 @@ $("#search-button").on("click", function () {
     searchString = $("#search-input").val();
     locationString = $("#location-input").val();
     performSearch(searchString, locationString);
+    console.log(resultsArray);
+    plotMap(resultsArray);
 });
 
 // Main function that runs search and gets a list of 10 search results
 function performSearch(searchString, locationString) {
+    // console.log(`before array reset ${resultsArray}`);
+    resultsArray = [];
+    
     // create query url using user input parameters
     queryURL = apiURL + "?query=" + searchString + "&near=" + locationString;
     const options = {
@@ -30,7 +35,7 @@ function performSearch(searchString, locationString) {
     fetch(queryURL, options)
         .then(response => response.json())
         .then(response => {
-            console.log(response)
+            // console.log(response)
             for (let i = 0; i < response.results.length; i++) {
                 // For each item returned extract the information we want and store in an object
                 const lat = response.results[i].geocodes.main.latitude;
@@ -45,6 +50,7 @@ function performSearch(searchString, locationString) {
                 }
                 // Add pin objects to results array
                 resultsArray.push(pin);
+                console.log("this is pin" + pin);
             }
         })
         // Catch any errors and log to console
