@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Local Business Explorer</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,37 +13,36 @@
     <link href="https://fonts.googleapis.com/css?family=Anton|Jura&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
     <!-- Leaflet Styling -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <!-- link to style sheet -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
     <title>Local Business Explorer</title>
 
 </head>
 
 <body id="page-top">
-
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Local Buisness Finder</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Local Business Explorer</a>
+            <button class="favouriteBtn">
+                <i class="far fa-heart"></i>
+            </button>
         </div>
     </nav>
     <main>
         <!-- Jumbotron -->
-        <div class="jumbotron">
-            <div class="jumboCopy">
-                <h1 class="display-4">Search</h1>
-                <div class="container">
+        <div class="jumbotron jumbotron-fluid" id="jumbotron">
+            <div class="container">
+                <h1 class="display-3 text-center">Search</h1>
+                <div class="homepage-container">
                     <div class="row">
                         <div class="col-4">
                             <input id="search-input" type="text" class="form-control" placeholder="business type">
@@ -55,18 +52,87 @@
                         </div>
                         <a id="search-button" class="btn btn-primary btn-md" href="#" role="button">Search</a>
                     </div>
-
                 </div>
             </div>
         </div>
 
-        <!-- results -->
-        <div class="results">
+        <div id="results-page">
+            <div class="container">
+                <div class="row">
+                    <aside class='col-3' id="aside">
+                        <!-- cards will be made dynamically - this is just to show how it will look -->
+                        <ul>
+                            <li>
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="/assets/images/placeholder.jpg.crdownload"
+                                                class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as
+                                                    a
+                                                    natural
+                                                    lead-in to additional content. This content is a little bit longer.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="/assets/images/placeholder.jpg.crdownload"
+                                                class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as
+                                                    a
+                                                    natural
+                                                    lead-in to additional content. This content is a little bit longer.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </li>
+                            <li>
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="/assets/images/placeholder.jpg.crdownload"
+                                                class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as
+                                                    a
+                                                    natural
+                                                    lead-in to additional content. This content is a little bit longer.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- end of cards -->
+                    </aside>
+                    <!-- map -->
+                    <div class="col-9">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div id="map"></div>
-
     </main>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
