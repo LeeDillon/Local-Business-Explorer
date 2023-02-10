@@ -51,4 +51,4 @@ function performSearch(searchString, locationString) {
         .catch(err => console.error(err));
 }
 // Perform search on page load - will change to onclick of a submit button once html page is created
-performSearch();
+// performSearch();
