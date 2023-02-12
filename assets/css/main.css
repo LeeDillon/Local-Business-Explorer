@@ -8,6 +8,12 @@ body {
     padding-top: 60px;
 }
 
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 1rem;
+}
+
 /* nav bar */
 #navbar {
     position: fixed;
@@ -63,8 +69,6 @@ body {
     height: 100%;
 }
 
-
-
 /* results */
 #results-page {
     display: none
@@ -82,10 +86,11 @@ body {
 
 .card {
     max-height: 200px;
-    overflow-y: auto;
-    overflow-x: hidden;
 }
 
+.favourites-card {
+    width: 18rem;
+}
 
 /* footer */
 footer {
@@ -93,4 +98,17 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+/* Media */
+@media (min-width: 768px) {
+    .favourites-card {
+        width: 18rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .favourites-card {
+        width: 100%;
+    }
 }
