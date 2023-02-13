@@ -7,7 +7,10 @@
     --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
-h1,
+h1 {
+    color: var(--primary-color)
+}
+
 h2,
 h3 {
     font-size: large;
@@ -102,11 +105,32 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin-top: 25px;
+}
+
+#jumbotron .container {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#search-input,
+#location-input {
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.form-control {
+    font-size: 20px;
 }
 
 #search-button {
-    margin-top: 25px;
     appearance: none;
     background-color: transparent;
     border: 2px solid var(--secondary-color);
@@ -119,7 +143,7 @@ main {
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
-    margin: 0;
+    margin: 20px 0 0 0;
     min-height: 60px;
     min-width: 0;
     outline: none;
@@ -150,16 +174,6 @@ main {
     transform: translateY(0);
 }
 
-#search-input,
-#location-input {
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-}
-
-.form-control {
-    font-size: 20px;
-}
-
 /* results */
 #results-page {
     display: none
@@ -179,6 +193,34 @@ main {
     max-height: 200px;
 }
 
+.card-header {
+    padding: 0.6rem 1.25rem;
+    position: relative;
+    width: 100%;
+}
+
+.card-header i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.addFavouriteIcon {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0;
+}
+
+.addFavouriteIcon:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+/* favourites */
 .favourites-card {
     width: 18rem;
 }
