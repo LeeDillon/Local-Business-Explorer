@@ -6,6 +6,8 @@ var locationString = "";
 let radius = 1000;
 var queryURL;
 
+// ('https://api.foursquare.com/v3/places/search?query=london&radius=1000&categories=indian', options)
+
 // Empty array to store result objects from API call
 var resultsArray = [];
 
