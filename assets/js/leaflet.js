@@ -19,8 +19,12 @@ function plotMap(resultsArray) {
     for (let i = 0; i < resultsArray.length; i++) {
         const lat = resultsArray[i].location[0];
         const lon = resultsArray[i].location[1];
-        const marker = L.marker([lat, lon]).addTo(map);
+        const pinName = resultsArray[i].name;
+        const marker = L.marker([lat, lon], {'title': pinName}).addTo(map);
+        // marker._icon.title = "another title";
     };
+    // const marker = L.marker([lat, lon], {'title':'initial title'}).addTo(map);
+
 
     console.log(averageLat);
     console.log(averageLon);
@@ -34,14 +38,12 @@ function plotMap(resultsArray) {
     // map.on('click', onMapClick);
 
 
-};
+
+    
+};    
 
 
-    // let circle = L.circle([51.508, -0.11], {
-    //     color: 'red',
-    //     fillColor: '#f03',
-    //     fillOpacity: 0.5,
-    //     radius: 250
+
     // }).addTo(map);
 
 
@@ -50,10 +52,4 @@ function plotMap(resultsArray) {
     //     .setContent("I am a standalone popup.")
     //     .openOn(map);
 
-    // function onMapClick(e) {
-    //     popup
-    //         .setLatLng(e.latlng)
-    //         .setContent("You clicked the map at " + e.latlng.toString())
-    //         .openOn(map);
-    // }
 
