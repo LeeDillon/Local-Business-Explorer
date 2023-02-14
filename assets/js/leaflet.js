@@ -5,12 +5,12 @@ function plotMap(resultsArray) {
 
     let averageLat = 0.0;
     let averageLon = 0.0;
-        
+
     for (let i = 0; i < resultsArray.length; i++) {
         averageLat += resultsArray[i].location[0];
         averageLon += resultsArray[i].location[1];
     };
-    
+
     averageLat = averageLat / resultsArray.length;
     averageLon = averageLon / resultsArray.length;
 
