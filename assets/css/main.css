@@ -182,7 +182,11 @@ main {
 }
 
 #map {
-    height: 100%;
+    height: 100vh;
+}
+
+#cardList {
+    height: 100vh;
 }
 
 #aside>ul {
@@ -262,6 +266,10 @@ main {
 
 .favourites-card .fa-heart:hover {
     color: var(--secondary-color);
+}
+
+#resultsRow {
+    max-height: 100vh;
 }
 
 
