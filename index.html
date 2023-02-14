@@ -51,20 +51,20 @@
                 <h1 class="display-3 text-center">Search for any Business</h1>
                 <div class="homepage-container">
                     <div class="row align-items-center">
-                        <div class="col-6">
+                        <div class="col-sm-12 col-md-6">
                             <input id="search-input" type="text" class="form-control" placeholder="business type">
                         </div>
-                        <div class="col-4 text-center">
+                        <div class="col-sm-8 col-md-4 text-center">
                             <input id="location-input" type="text" class="form-control" placeholder="city">
                         </div>
-                        <div class="col-2">
+                        <div class="col-sm-4 col-md-2">
                             <div class="near-button-container">
                                 <a id="near-button" class="btn btn-primary btn-md text-nowrap" href="#"
                                     role="button">Near
                                     Me</a>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-sm-12 col-md-12">
                             <div class="search-button-container">
                                 <a id="search-button" class="btn btn-primary btn-md" href="#" role="button">Search</a>
                             </div>
@@ -78,7 +78,7 @@
         <div id="results-page">
             <div class="container">
                 <div class="row " id="resultsRow">
-                    <aside class='col-5' id="aside">
+                    <aside class='col-sm-12 col-md-5' id="aside">
                         <!-- cards will be made dynamically - this is just to show how it will look -->
                         <ul id="cardList" class="overflow-auto">
                             <!-- Cards go here -->
@@ -86,7 +86,7 @@
                         <!-- end of cards -->
                     </aside>
                     <!-- map -->
-                    <div class="col-7">
+                    <div class="col-sm-12 col-md-7">
                         <div id="map"></div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; Ichiban 2023. All Rights Reserved.</p>
+            <p id="footerText">&copy; Ichiban 2023. All Rights Reserved.</p>
         </div>
     </footer>
 
