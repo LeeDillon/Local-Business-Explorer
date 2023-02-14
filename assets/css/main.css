@@ -21,6 +21,11 @@ h3 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+h5,
+p {
+    color: var(--primary-color);
+}
+
 body {
     padding-top: 60px;
 }
@@ -41,6 +46,7 @@ main {
     z-index: 9999;
     background-color: var(--primary-color);
     box-shadow: 0 2px 4px var(--shadow-color);
+    height: 60px;
 }
 
 .navbar-brand {
@@ -98,7 +104,6 @@ main {
     align-items: center;
     justify-content: center;
     margin: 0;
-    margin-top: -10px;
 }
 
 .homepage-container {
@@ -135,9 +140,9 @@ main {
 #search-button,
 #near-button {
     appearance: none;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid var(--secondary-color);
-    border-radius: 15px;
+    border-radius: 8px;
     box-sizing: border-box;
     color: var(--secondary-color);
     cursor: pointer;
@@ -157,8 +162,12 @@ main {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 100%;
     will-change: transform;
+    backdrop-filter: blur(10px);
+}
+
+#search-button {
+    margin-top: 10px;
 }
 
 #search-button:disabled,
@@ -240,6 +249,11 @@ main {
     color: var(--secondary-color);
 }
 
+.search-button-container {
+    display: flex;
+    justify-content: center;
+}
+
 /* favourites */
 #favouritesContainer {
     margin-top: -10px;
@@ -284,4 +298,25 @@ footer {
     color: var(--secondary-color);
     padding: 20px;
     text-align: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
 }
