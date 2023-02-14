@@ -1,5 +1,5 @@
 // Variables needed for API call
-var apiURL = "https://api.foursquare.com/v3/places/search?";
+var apiURL = "https://api.foursquare.com/v3/places/search";
 var key = "fsq35dGw8MR3i1aS2Szjz+ZWoEvdc58TSQd57mxpQMRjvrY=";
 var searchString = "";
 var locationString = "";
@@ -29,7 +29,8 @@ function performSearch(searchString, locationString) {
     resultsArray = [];
 
     // create query url using user input parameters
-    queryURL = apiURL + "?query=" + searchString  + "&near=" + locationString ;
+    queryURL = apiURL + "?query=" + searchString + "&near=" + locationString;
+    console.log(queryURL)
     const options = {
         method: 'GET',
         headers: {
@@ -58,6 +59,7 @@ function performSearch(searchString, locationString) {
                 resultsArray.push(pin);
             }
             plotMap(resultsArray);
+            generateCards(resultsArray)
         })
         // Catch any errors and log to console
         .catch(err => console.error(err));
