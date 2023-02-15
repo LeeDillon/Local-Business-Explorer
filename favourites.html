@@ -31,27 +31,31 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="index.html">Local Business Explorer</a>
-            <h2 class="navbar-brand js-scroll-trigger">Your Favourited Places</h1>
-                <a class="searchIcon" href="index.html">
-                    <i class="fas fa-magnifying-glass"></i>
-                </a>
+            <a class="searchIcon ml-auto" href="index.html" hidden>
+                <i class="fas fa-magnifying-glass"></i>
+            </a>
+            <a class="favouriteIcon" href="favourites.html">
+                <i class="far fa-heart"></i>
+            </a>
         </div>
     </nav>
 
     <main>
         <div class="flex-wrap flex-md-nowrap">
-            <ul id="favouritesContainer" class="overflow-auto">
+            <ul id="favouritesContainer" class="row">
                 <!-- dynamically generate favourited places cards here -->
             </ul>
-            <button type="button" id="clearAll">Clear All</button>
-            <div class="favouritesMap" id="map"></div>
+            <div class="clear-button-container col-12">
+                <button type="button" id="clearAll">Clear All</button>
+            </div>
+
         </div>
 
     </main>
 
     <footer>
         <div class="container">
-            <p id="footerText">&copy; Ichiban 2023. All Rights Reserved.</p>
+            <p id="footerText">&copy; Team Ichiban! 2023. All Rights Reserved.</p>
         </div>
     </footer>
     <!-- jQuery -->

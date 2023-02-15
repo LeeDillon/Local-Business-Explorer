@@ -1,7 +1,7 @@
 /* color scheme */
 :root {
     --primary-color: rgb(34, 34, 34);
-    --secondary-color: #654321;
+    --secondary-color: hsl(0, 0%, 71%);
     --bg-color: whitesmoke;
     --input-color: whitesmoke;
     --hover-color: whitesmoke;
@@ -18,10 +18,14 @@ p {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-h1,
+
 h5,
 p {
     color: var(--primary-color);
+}
+
+h1 {
+    color: var(--input-color);
 }
 
 h2,
@@ -233,7 +237,6 @@ footer {
 }
 
 .card {
-    max-height: 200px;
     box-shadow: 0 2px 4px var(--shadow-color);
 }
 
@@ -276,17 +279,17 @@ footer {
 
 /* favourites */
 #favouritesContainer {
-    margin-top: -10px;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    list-style: none;
+    min-height: 100vh;
 }
 
 .favourites-card {
     width: 250px;
     height: 250px;
     margin-top: 30px;
-
     background-color: var(--bg-color);
     box-shadow: 0 2px 4px var(--shadow-color);
 }
@@ -306,6 +309,12 @@ footer {
 
 .favourites-card .fa-heart:hover {
     color: var(--secondary-color);
+}
+
+.clear-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 
@@ -329,3 +338,24 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.6);
 }
+
+/* Hiding Near me button until it is working */
+#near-button {
+    display: none;
+}
+
+
+
+
+
+/* Media query to change height of sidebar so that it moves above the rest of the content once the device width hits this point */
+/* @media only screen and (max-width: 768px) {
+    .row {
+        flex-direction: row;
+    }
+
+    #clearAll {
+        margin: 20px;
+        justify-content: center;
+    }
+} */
