@@ -1,9 +1,10 @@
 /* color scheme */
 :root {
-    --primary-color: rgb(22, 22, 104);
-    --secondary-color: rgba(255, 217, 0, 0.847);
-    --bg-color: rgb(216, 235, 242);
-    --hover-color: rgb(216, 235, 242);
+    --primary-color: rgb(34, 34, 34);
+    --secondary-color: rgb(210, 105, 30);
+    --bg-color: rgb(26, 109, 26);
+    --input-color: whitesmoke;
+    --hover-color: whitesmoke;
     --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -142,7 +143,7 @@ footer {
     right: 0;
     z-index: 9999;
     color: var(--primary-color);
-    background-color: var(--bg-color);
+    background-color: var(--input-color);
     box-shadow: 0 2px 4px var(--shadow-color);
 }
 
@@ -153,11 +154,11 @@ footer {
 #search-button,
 #near-button {
     appearance: none;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
     border-radius: 8px;
     box-sizing: border-box;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     cursor: pointer;
     display: inline-block;
     font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -176,7 +177,6 @@ footer {
     -webkit-user-select: none;
     touch-action: manipulation;
     will-change: transform;
-    backdrop-filter: blur(10px);
 }
 
 #search-button {
@@ -194,6 +194,7 @@ footer {
     background-color: var(--secondary-color);
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
+    border: solid var(--primary-color);
 }
 
 #search-button:active,
@@ -228,6 +229,7 @@ footer {
 
 .card {
     max-height: 200px;
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .card-header {
@@ -314,11 +316,11 @@ footer {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 10px
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }
