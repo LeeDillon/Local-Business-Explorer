@@ -54,7 +54,7 @@ function performSearch(searchString, locationString) {
                     category: response.results[i].categories[0].name,
                     icon: response.results[i].categories[0].icon.prefix + response.results[i].categories[0].icon.suffix,//???
                     address: response.results[i].location,
-                    // postalcode: response.results[i].postcode
+
                 }
                 // Add pin objects to results array
                 resultsArray.push(pin);
