@@ -10,31 +10,66 @@ $("#search-button").click(function () {
     showResultsPage()
 });
 
+function getStoredResults() {
+    let storageValueString = localStorage.getItem('favouritePlaces');
+    let storageValue;
+    if (storageValueString === null) {
+        storageValue = [];
+    } else {
+        storageValue = JSON.parse(storageValueString);
+    }
+    return storageValue;
+}
+
 function generateCards(resultsArray) {
-    for (let i = 0; i < resultsArray.length; i++) {
-        const element = resultsArray[i];
-        // From each element in the array get the icon info and insert into card
-        var cardName = element.name;
-        var cardAddress = element.address.formatted_address;
-        var cardCategory = element.category;
-        // var cardIcon = element.icon;
-        // daysToAdd++
-        // Code to dynamically generate a forecast card and populate variables using template literals that use above variables
-        $('#cardList').append(`
-            <li>
-                <div class="card mb-3">
-                    <a class="card-header">
-                        <i class="addFavouriteIcon far fa-heart"></i>
-                    </a>
-                        <div class="card-body">
-                            <h5 class="card-title">${cardName}</h5>
-                            <p class="card-text">Address: ${cardAddress}
-                            </p>
-                            <p class="card-category">Category: ${cardCategory}
-                            </p>
-                        </div>
-                </div>
-            </li>`)
-    };
+
+    resultsArray.forEach(function (element) {
+
+        let cardName = element.name;
+        let cardAddress = element.address.formatted_address;
+        let cardCategory = element.category;
+
+        let li = $("<li>");
+        $('#cardList').append(li);
+
+        let card = $("<div>")
+        card.addClass("card mb-3");
+        li.append(card);
+
+        let button = $('<button>');
+        button.attr('type', 'button');
+        button.addClass('addFavouriteIcon card-header');
+        card.append(button);
+
+        let i = $('<i>');
+        i.addClass('far fa-heart');
+        button.append(i);
+
+        card.append(` 
+        <div class="card-body">
+<h5 class="card-title">${cardName}</h5>
+<p class="card-text">Address: ${cardAddress}</p>
+<p class="card-category">Category: ${cardCategory}</p>
+</div>
+`);
+
+        button.on('click', function () {
+            let storageValue = getStoredResults();
+
+            let doesContainElement = storageValue.some(function (storedElement) {
+                return storedElement.name === element.name;
+            })
+
+            if (doesContainElement) {
+                return;
+            }
+            storageValue.push(element);
+
+            localStorage.setItem('favouritePlaces', JSON.stringify(storageValue));
+
+        })
+
+
+    })
 }
 
