@@ -12,7 +12,9 @@ function plotMap(resultsArray) {
     averageLat = averageLat / resultsArray.length;
     averageLon = averageLon / resultsArray.length;
 
-    let map = L.map('map').setView([averageLat, averageLon], 15);
+    // let markerGroup = new L.featureGroup([]);
+
+    let map = L.map('map').setView([averageLat, averageLon], 14);
 
     for (let i = 0; i < resultsArray.length; i++) {
         const lat = resultsArray[i].location[0];
@@ -21,6 +23,8 @@ function plotMap(resultsArray) {
         const marker = L.marker([lat, lon], {'title': pinName}).addTo(map);
         // marker._icon.title = "another title";
         marker.bindPopup(pinName); // be nice to make this business name pop-up label on click: BOLD text
+
+        // markerGroup.push(marker);
     };
     // const marker = L.marker([lat, lon], {'title':'initial title'}).addTo(map);
 
