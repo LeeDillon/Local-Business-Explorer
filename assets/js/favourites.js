@@ -1,5 +1,6 @@
 let favourites = getStoredResults();
 
+console.log(favourites);
 
 favourites.forEach(function (element) {
 
@@ -34,27 +35,25 @@ favourites.forEach(function (element) {
 
     removeButton.on('click', function () {
 
-        let storageValue = getStoredResults();
+        // localStorage.removeItem(element);
+
+        // let storageValue = getStoredResults();
 
         let removePlace = storageValue.filter(function (storedElement) {
+            console.log(storedElement.name)
+            console.log(element.name)
             return storedElement.name === element.name;
         })
 
-        if (removePlace) {
+        // if (removePlace) {
 
-            storageValue.clear(element);
+        //     element.remove();
 
-        }
+        //     storageValue.clear(element);
 
-        let removePlace = storageValue.filter(function (storedElement) {
-            return storedElement.name === element.name;
-        })
+        // }
 
-        if (removePlace) {
-            return
-        }
     })
-
 })
 
 
@@ -67,7 +66,7 @@ $('#clearAll').on('click', function () {
 })
 
 
-// clear button within function to remove card and remove from local storage
+// induvidual clear buttons
 // filter function for local storage favourites.filter()
 // clear all local.storage.clear()
 
