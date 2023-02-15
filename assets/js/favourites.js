@@ -1,5 +1,6 @@
 let favourites = getStoredResults();
 
+
 favourites.forEach(function (element) {
 
     let cardName = element.name;
@@ -36,32 +37,34 @@ favourites.forEach(function (element) {
         let storageValue = getStoredResults();
 
         let removePlace = storageValue.filter(function (storedElement) {
-            return storedElement.name = element.name;
+            return storedElement.name === element.name;
         })
 
         if (removePlace) {
-            // localStorage.storedElement.clear();
+
             storageValue.clear(element);
+
         }
 
+        let removePlace = storageValue.filter(function (storedElement) {
+            return storedElement.name === element.name;
+        })
 
-
-        // console.log(element);
-
-        // let removePlace = storageValue.filter(function (storedElement) {
-        //     return storedElement.name === element.name;
-        // })
-
-        // if (removePlace) {
-        //     return
-        // }
+        if (removePlace) {
+            return
+        }
     })
-
-
-
 
 })
 
+
+$('#clearAll').on('click', function () {
+
+    $('#favouritesContainer').remove();
+
+    localStorage.clear();
+
+})
 
 
 // clear button within function to remove card and remove from local storage
