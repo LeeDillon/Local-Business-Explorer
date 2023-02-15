@@ -18,7 +18,6 @@ function getStoredResults() {
     } else {
         storageValue = JSON.parse(storageValueString);
     }
-
     return storageValue;
 }
 

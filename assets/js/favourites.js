@@ -37,21 +37,20 @@ favourites.forEach(function (element) {
 
         // localStorage.removeItem(element);
 
-        // let storageValue = getStoredResults();
+        let storageValue = getStoredResults();
 
         let removePlace = storageValue.filter(function (storedElement) {
             console.log(storedElement.name)
             console.log(element.name)
-            return storedElement.name === element.name;
+            return storedElement.name !== element.name;
         })
 
-        // if (removePlace) {
+        if (removePlace) {
 
-        //     element.remove();
+            localStorage.setItem('favouritePlaces', JSON.stringify(removePlace));
 
-        //     storageValue.clear(element);
-
-        // }
+            li.remove();
+        }
 
     })
 })
