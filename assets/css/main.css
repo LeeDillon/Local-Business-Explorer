@@ -279,12 +279,11 @@ footer {
 
 /* favourites */
 #favouritesContainer {
-    margin-top: -10px;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    height: 100vh;
     list-style: none;
+    min-height: 100vh;
 }
 
 .favourites-card {
@@ -310,6 +309,12 @@ footer {
 
 .favourites-card .fa-heart:hover {
     color: var(--secondary-color);
+}
+
+.clear-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 
@@ -339,10 +344,7 @@ footer {
     display: none;
 }
 
-/* #clearAll {
-    width: 
-    margin: 20px;
-} */
+
 
 
 
