@@ -1,5 +1,3 @@
-// const res = require("express/lib/response");
-
 // console.log(resultsArray)
 function plotMap(resultsArray) {
 
@@ -22,6 +20,7 @@ function plotMap(resultsArray) {
         const pinName = resultsArray[i].name;
         const marker = L.marker([lat, lon], {'title': pinName}).addTo(map);
         // marker._icon.title = "another title";
+        marker.bindPopup(pinName); // be nice to make this business name pop-up label on click: BOLD text
     };
     // const marker = L.marker([lat, lon], {'title':'initial title'}).addTo(map);
 
@@ -41,7 +40,6 @@ function plotMap(resultsArray) {
 
     
 };    
-
 
 
     // }).addTo(map);
