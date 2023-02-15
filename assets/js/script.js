@@ -10,16 +10,7 @@ $("#search-button").click(function () {
     showResultsPage()
 });
 
-function favouritesStartUp () {
-    let favourites = getStoredResults();
-console.log('this works');
-favourites.forEach(function (result) {
-    console.log('this works');
-    $('#favouritesContainer').append($('<p>').text(result.name))
-})
-}
-
-function getStoredResults () {
+  function getStoredResults () {
     let storageValueString = localStorage.getItem('favouritePlaces');
             let storageValue;
             if(storageValueString === null) {
