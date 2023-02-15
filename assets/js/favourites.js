@@ -13,7 +13,7 @@ favourites.forEach(function (element) {
     $('#favouritesContainer').append(li);
 
     let card = $("<div>")
-    card.addClass("card mb-3");
+    card.addClass("card mb-3 favourites-card");
     li.append(card);
 
     let removeButton = $('<button>');
