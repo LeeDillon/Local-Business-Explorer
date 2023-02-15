@@ -19,7 +19,7 @@ $("#search-button").on("click", function () {
 
     // })
 
-    // console.log(resultsArray);
+    console.log(resultsArray);
     // console.log(resultsArray.length);
 });
 
@@ -52,11 +52,13 @@ function performSearch(searchString, locationString) {
                     name: response.results[i].name,
                     location: pinCoord,
                     category: response.results[i].categories[0].name,
-                    icon: response.results[i].categories[0].icon.prefix + response.results[i].categories[0].icon.suffix,
+                    icon: response.results[i].categories[0].icon.prefix + response.results[i].categories[0].icon.suffix,//???
                     address: response.results[i].location,
+
                 }
                 // Add pin objects to results array
                 resultsArray.push(pin);
+                // console.log(pin.postalcode);
             }
             plotMap(resultsArray);
             generateCards(resultsArray)
