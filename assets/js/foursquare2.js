@@ -17,12 +17,6 @@ $("#search-button").on("click", function () {
     searchString = $("#search-input").val();
     locationString = $("#location-input").val();
     performSearch(searchString, locationString)
-    // .then(function () {
-
-    // })
-
-    // console.log(resultsArray);
-    // console.log(resultsArray.length);
 });
 
 // Main function that runs search and gets a list of 10 search results
@@ -31,7 +25,7 @@ function performSearch(searchString, locationString) {
     resultsArray = [];
 
     // create query url using user input parameters
-    queryURL = apiURL + "?query=" + searchString  + "&near=" + locationString ;
+    queryURL = apiURL + "query=" + searchString + "&near=" + locationString ;
     const options = {
         method: 'GET',
         headers: {
