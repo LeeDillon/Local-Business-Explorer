@@ -14,14 +14,14 @@ favourites.forEach(function (element) {
     card.addClass("card mb-3");
     li.append(card);
 
-    let button = $('<button>');
-    button.attr('type', 'button');
-    button.addClass('favouritedIcon card-header');
-    card.append(button);
+    let removeButton = $('<button>');
+    removeButton.attr('type', 'button');
+    removeButton.addClass('favouritedIcon card-header');
+    card.append(removeButton);
 
     let i = $('<i>');
     i.addClass('fas fa-heart');
-    button.append(i);
+    removeButton.append(i);
 
     card.append(` 
     <div class="card-body">
@@ -30,6 +30,35 @@ favourites.forEach(function (element) {
 <p class="card-category">Category: ${cardCategory}</p>
 </div>
 `);
+
+    removeButton.on('click', function () {
+
+        let storageValue = getStoredResults();
+
+        let removePlace = storageValue.filter(function (storedElement) {
+            return storedElement.name = element.name;
+        })
+
+        if (removePlace) {
+            // localStorage.storedElement.clear();
+            storageValue.clear(element);
+        }
+
+
+
+        // console.log(element);
+
+        // let removePlace = storageValue.filter(function (storedElement) {
+        //     return storedElement.name === element.name;
+        // })
+
+        // if (removePlace) {
+        //     return
+        // }
+    })
+
+
+
 
 })
 

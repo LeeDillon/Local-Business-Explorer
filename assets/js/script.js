@@ -10,16 +10,16 @@ $("#search-button").click(function () {
     showResultsPage()
 });
 
-  function getStoredResults () {
+function getStoredResults() {
     let storageValueString = localStorage.getItem('favouritePlaces');
-            let storageValue;
-            if(storageValueString === null) {
-                storageValue = [];
-            } else {
-storageValue = JSON.parse(storageValueString);
-            }
+    let storageValue;
+    if (storageValueString === null) {
+        storageValue = [];
+    } else {
+        storageValue = JSON.parse(storageValueString);
+    }
 
-            return storageValue;
+    return storageValue;
 }
 
 function generateCards(resultsArray) {
@@ -30,7 +30,7 @@ function generateCards(resultsArray) {
         let cardAddress = element.address.formatted_address;
         let cardCategory = element.category;
 
-    let li = $("<li>");
+        let li = $("<li>");
         $('#cardList').append(li);
 
         let card = $("<div>")
@@ -57,61 +57,20 @@ function generateCards(resultsArray) {
         button.on('click', function () {
             let storageValue = getStoredResults();
 
-let doesContainElement = storageValue.some(function(storedElement) {
-    return storedElement.name === element.name;
-})
+            let doesContainElement = storageValue.some(function (storedElement) {
+                return storedElement.name === element.name;
+            })
 
-if(doesContainElement) {
-    return;
-}
+            if (doesContainElement) {
+                return;
+            }
             storageValue.push(element);
 
             localStorage.setItem('favouritePlaces', JSON.stringify(storageValue));
-             
+
         })
 
 
     })
 }
-
-
-
-// get items from local storage and generate a card on favourites page
-
-
-
- 
-    // };
-
-
-    // const favouritedItem = $('#favouriteBtn');
-
-    // let history = [];
-
-    // let storedHistory = localStorage.getItem("favouritedPlaces");
-
-// // function getFavouritedPlaces() {
-
-// // }
-
-// favouritedItem.on('click', $('button') function (event) {
-//     event.preventDefault();
-//     console.log("it worked");
-    //     const favouritedPlaceName = event.target.cardName;
-    //     const favouritedPlaceAdress = event.target.cardAddress;
-    //     const favouritedPlaceCategory = event.target.cardCategory;
-
-    //     const favourite = {
-    //         name: favouritedPlaceName,
-    //         address: favouritedPlaceAdress,
-    //         category: favouritedPlaceCategory
-    //     }
-
-    //     history.push(favourite);
-
-    //     localStorage.setItem("favouritedPlaces", JSON.stringify(favourite));
-
-    //     generateFavouritesCards();
-    //     //function to generate card on favourites page
-// })
 
