@@ -4,7 +4,7 @@ This [Local Business Explorer](<link to deployed webpage here>) webpage allows t
 
 ## Screenshots 
 
-### Screenshot of results page on decktop 
+### Screenshot of results page on desktop 
 
 ![alt text](./assets/images/results-page-on-desktop.png)
 
