@@ -1,4 +1,3 @@
-
 function showResultsPage() {
     $("#jumbotron").hide();
     $("#results-page").show();
@@ -54,17 +53,19 @@ function generateCards(resultsArray) {
 `);
 
         button.on('click', function () {
-            let storageValue = getStoredResults();
 
+            let storageValue = getStoredResults();
+            // if already favourited dont save to local storage again
             let doesContainElement = storageValue.some(function (storedElement) {
                 return storedElement.name === element.name;
             })
-
+            // if it is already stored return
             if (doesContainElement) {
                 return;
             }
+            // push item to array
             storageValue.push(element);
-
+            // save to local storage 
             localStorage.setItem('favouritePlaces', JSON.stringify(storageValue));
 
         })
@@ -72,4 +73,3 @@ function generateCards(resultsArray) {
 
     })
 }
-

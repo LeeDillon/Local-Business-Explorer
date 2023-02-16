@@ -66,5 +66,6 @@ function performSearch(searchString, locationString) {
         // Catch any errors and log to console
         .catch(err => console.error(err));
 }
-// Perform search on page load - will change to onclick of a submit button once html page is created
-// performSearch();
+    // Perform search on page load - will change to onclick of a submit button once html page is created
+    // performSearch();
+

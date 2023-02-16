@@ -1,3 +1,5 @@
+
+
 let favourites = getStoredResults();
 
 console.log(favourites);
@@ -35,20 +37,18 @@ favourites.forEach(function (element) {
 
     removeButton.on('click', function () {
 
-        // localStorage.removeItem(element);
-
         let storageValue = getStoredResults();
 
+        // filter through arrray and find the business name we want to remove
         let removePlace = storageValue.filter(function (storedElement) {
-            console.log(storedElement.name)
-            console.log(element.name)
             return storedElement.name !== element.name;
         })
 
+        // removePlace is string without the unfavourited place
         if (removePlace) {
-
+            // set new string to local storage
             localStorage.setItem('favouritePlaces', JSON.stringify(removePlace));
-
+            // remove the item card 
             li.remove();
         }
 
@@ -63,11 +63,3 @@ $('#clearAll').on('click', function () {
     localStorage.clear();
 
 })
-
-
-// induvidual clear buttons
-// filter function for local storage favourites.filter()
-// clear all local.storage.clear()
-
-
-// document ready all files 

@@ -18,7 +18,7 @@ function plotMap(resultsArray) {
         const lon = resultsArray[i].location[1];
         const pinName = resultsArray[i].name;
         const postcode = resultsArray[i].address.postcode;
-        const marker = L.marker([lat, lon], {'title': pinName}).addTo(map);
+        const marker = L.marker([lat, lon], { 'title': pinName }).addTo(map);
         marker.bindPopup(`${pinName} ${postcode}`);
     };
 
@@ -31,7 +31,5 @@ function plotMap(resultsArray) {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-};    
-
-
+};
 
