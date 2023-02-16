@@ -32,8 +32,4 @@ function plotMap(resultsArray) { // this function takes in the results array and
         maxZoom: 19,                                                // set the max allowed zoom level
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' // attribution is required by the map developers
     }).addTo(map);
-
-};    
-
-
-
+};
