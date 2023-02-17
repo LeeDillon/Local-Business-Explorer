@@ -1,23 +1,30 @@
 # Local-Business-Explorer
 
+## Overview
+ 
 This [Local Business Explorer](https://leedillon.github.io/Local-Business-Explorer) app allows the user to search for any type of business in any city. A results page then shows 10 businesses related to the users search input in the form of cards with the businesses details as well as the businesses addresses pin pointed on a map. The map and pin points where generated using api calls from [leaflet](https://leafletjs.com/) and [foursquare](https://location.foursquare.com/developer/). The user can then favourite businesses and have the favourited businesses stored in their local storage and displayed as cards on the favourites page. 
 
-## Link to GitHub repo: https://github.com/LeeDillon/Local-Business-Explorer
 
-## Link to deployed app on GitHub Pages: https://leedillon.github.io/Local-Business-Explorer/
 
-## Link to Google Slides presentation (may require permissions): https://docs.google.com/presentation/d/11PbsiTGQAsAwqYewG7P8PqiX3UCvsruczU7dKG41v4s/edit?usp=sharing
+* Link to GitHub repo: https://github.com/LeeDillon/Local-Business-Explorer
 
-## Screenshots 
+* Link to deployed app on GitHub Pages: https://leedillon.github.io/Local-Business-Explorer/
 
-### Screenshot of results page on desktop 
+* Link to Google Slides presentation (may require permissions): https://docs.google.com/presentation/d/11PbsiTGQAsAwqYewG7P8PqiX3UCvsruczU7dKG41v4s/edit?usp=sharing
 
-![alt text](./assets/images/results-page-on-desktop.png)
 
-### Screenshot of favourites page on mobile
+### Screenshots of Tool in Browser:
+Desktop View of Home Page:
+![image](https://user-images.githubusercontent.com/86656625/219610000-a6afc5f5-2f75-456d-8cff-cff605bac5cc.png)
 
-![alt text](./assets/images/favourite-page-on-phone.png)
+Desktop View of Search Results:
+![image](https://user-images.githubusercontent.com/86656625/219610437-add44ca7-1f0c-4922-a144-9c1b9c09e06b.png)
+
+Mobile View:
+
+![image](https://user-images.githubusercontent.com/86656625/219609460-1f2d49d6-6c0d-4e12-901f-832f88194787.png)
 
 ## Credits 
 
 - search button and clear all button design by [Foundation Button 28](https://getcssscan.com/css-buttons-examples) on css scan.
+
