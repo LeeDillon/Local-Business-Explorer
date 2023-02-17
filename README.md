@@ -18,7 +18,7 @@ Desktop View of Home Page:
 ![image](https://user-images.githubusercontent.com/86656625/219610000-a6afc5f5-2f75-456d-8cff-cff605bac5cc.png)
 
 Desktop View of Search Results:
-![image](https://user-images.githubusercontent.com/86656625/219610437-add44ca7-1f0c-4922-a144-9c1b9c09e06b.png)
+![image](https://user-images.githubusercontent.com/86656625/219641080-327abb09-dea8-46c4-9b2f-b1899bee5227.png)
 
 Mobile View of Favourites:
 
