@@ -2,6 +2,12 @@
 
 This [Local Business Explorer](https://leedillon.github.io/Local-Business-Explorer) app allows the user to search for any type of business in any city. A results page then shows 10 businesses related to the users search input in the form of cards with the businesses details as well as the businesses addresses pin pointed on a map. The map and pin points where generated using api calls from [leaflet](https://leafletjs.com/) and [foursquare](https://location.foursquare.com/developer/). The user can then favourite businesses and have the favourited businesses stored in their local storage and displayed as cards on the favourites page. 
 
+## Link to GitHub repo: https://github.com/LeeDillon/Local-Business-Explorer
+
+## Link to deployed app on GitHub Pages: https://leedillon.github.io/Local-Business-Explorer/
+
+## Link to Google Slides presentation (may require permissions): https://docs.google.com/presentation/d/11PbsiTGQAsAwqYewG7P8PqiX3UCvsruczU7dKG41v4s/edit?usp=sharing
+
 ## Screenshots 
 
 ### Screenshot of results page on desktop 
