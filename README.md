@@ -20,7 +20,7 @@ Desktop View of Home Page:
 Desktop View of Search Results:
 ![image](https://user-images.githubusercontent.com/86656625/219610437-add44ca7-1f0c-4922-a144-9c1b9c09e06b.png)
 
-Mobile View:
+Mobile View of Favourites:
 
 ![image](https://user-images.githubusercontent.com/86656625/219609460-1f2d49d6-6c0d-4e12-901f-832f88194787.png)
 
