@@ -13,14 +13,14 @@ This [Local Business Explorer](https://leedillon.github.io/Local-Business-Explor
 * Link to Google Slides presentation (may require permissions): https://docs.google.com/presentation/d/11PbsiTGQAsAwqYewG7P8PqiX3UCvsruczU7dKG41v4s/edit?usp=sharing
 
 
-### Screenshots of Tool in Browser:
+### Screenshots of app in browser:
 Desktop View of Home Page:
 ![image](https://user-images.githubusercontent.com/86656625/219610000-a6afc5f5-2f75-456d-8cff-cff605bac5cc.png)
 
-Desktop View of Search Results:
+Desktop view of search results:
 ![image](https://user-images.githubusercontent.com/86656625/219641080-327abb09-dea8-46c4-9b2f-b1899bee5227.png)
 
-Mobile View of Favourites:
+Mobile view of Favourites:
 
 ![image](https://user-images.githubusercontent.com/86656625/219609460-1f2d49d6-6c0d-4e12-901f-832f88194787.png)
 
